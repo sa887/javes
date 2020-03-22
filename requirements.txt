@@ -1,4 +1,4 @@
-Pillow
+Pillow>=6.0.0
 PyGithub
 aiofiles
 aiohttp
@@ -76,7 +76,6 @@ humanize
 lxml
 lyricsgenius
 oauth2client
-Pillow
 psycopg2
 psycopg2-binary
 pybase64

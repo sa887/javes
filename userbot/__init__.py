@@ -69,7 +69,7 @@ HEROKU_APIKEY = os.environ.get("HEROKU_APIKEY", None)
 
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/rekcah-pavi/javes")
+    "https://github.com/rekcahkumar/javes")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))

@@ -1,5 +1,6 @@
 # We're using Alpine Edge
 FROM alpine:edge
+FROM python:3.7-rc-alpine3.7
 
 # We have to uncomment Community repo for some packages
 RUN sed -e 's;^#http\(.*\)/edge/community;http\1/edge/community;g' -i /etc/apk/repositories
@@ -7,6 +8,7 @@ RUN sed -e 's;^#http\(.*\)/edge/community;http\1/edge/community;g' -i /etc/apk/r
 # install ca-certificates so that HTTPS works consistently
 # other runtime dependencies for Python are installed later
 RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache g++ freetype-dev jpeg-dev
 
 # Installing Packages
 RUN apk add --no-cache --update \

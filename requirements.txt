@@ -12,6 +12,7 @@ coffeehouse
 cowpy
 cryptg
 dnspython
+covid
 emoji
 telethon
 gTTS-token

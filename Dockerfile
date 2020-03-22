@@ -11,6 +11,7 @@ RUN apk add --no-cache ca-certificates
 
 # Installing Packages
 RUN apk add --no-cache --update \
+RUN apk add --no-cache g++ freetype-dev jpeg-dev
     bash \
     build-base \
     bzip2-dev \

@@ -1,6 +1,6 @@
 # We're using Alpine Edge
 FROM alpine:edge
-FROM python:3.7-rc-alpine3.7
+
 
 # We have to uncomment Community repo for some packages
 RUN sed -e 's;^#http\(.*\)/edge/community;http\1/edge/community;g' -i /etc/apk/repositories

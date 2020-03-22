@@ -37,9 +37,7 @@ def javes05(**args):
 
     def decorator(func):
         async def wrapper(check):
-            if not LOGSPAMMER:
-                await check.respond("`Error 4O4`")
-            else:
+            if LOGSPAMMER:
                 send_to = BOTLOG_CHATID
 
             if not trigger_on_fwd and check.fwd_from:

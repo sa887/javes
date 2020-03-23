@@ -1,17 +1,16 @@
 # We're using Alpine Edge
 FROM alpine:edge
 
-
 # We have to uncomment Community repo for some packages
 RUN sed -e 's;^#http\(.*\)/edge/community;http\1/edge/community;g' -i /etc/apk/repositories
 
 # install ca-certificates so that HTTPS works consistently
 # other runtime dependencies for Python are installed later
 RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache g++ freetype-dev jpeg-dev
 
 # Installing Packages
 RUN apk add --no-cache --update \
-RUN apk add --no-cache g++ freetype-dev jpeg-dev
     bash \
     build-base \
     bzip2-dev \
@@ -62,7 +61,7 @@ RUN python3 -m ensurepip \
 #
 # Clone repo and prepare working directory
 #
-RUN git clone https://github.com/rekcahkumar/javes /root/userbot
+RUN git clone https://github.com/rekcah-pavi/javes /root/userbot
 RUN mkdir /root/userbot/bin/
 WORKDIR /root/userbot/
 

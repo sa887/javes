@@ -144,7 +144,7 @@ def bruh(name):
     os.system("instantmusic -q -s "+name)
     
 
-@javes05(outgoing=True, disable_errors=True, pattern="^.song(?: |$)(.*)")
+@register(outgoing=True, pattern="^.song(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -157,7 +157,6 @@ async def _(event):
     await event.edit("ok finding the song")    
     bruh(str(cmd))
     l = glob.glob("*.mp3")
-    loa = l[0]
     await event.edit("sending song")
     await borg.send_file(
                 event.chat_id,

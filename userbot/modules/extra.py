@@ -118,6 +118,7 @@ from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotMo
 import io
 import asyncio
 import time
+from userbot import CMD_HELP, bot
 import glob
 import os
 try:
@@ -158,7 +159,7 @@ async def _(event):
     bruh(str(cmd))
     l = glob.glob("*.mp3")
     await event.edit("sending song")
-    await client.send_file(
+    await bot.send_file(
                 event.chat_id,
                 loa,
                 force_document=True,

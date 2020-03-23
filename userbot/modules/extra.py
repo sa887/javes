@@ -144,7 +144,7 @@ def bruh(name):
     os.system("instantmusic -q -s "+name)
     
 
-@register(outgoing=True, pattern="^.song(?: |$)(.*)")
+@javes05(outgoing=True, pattern="^.song(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return

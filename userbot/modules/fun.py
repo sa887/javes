@@ -18,6 +18,14 @@ from cowpy import cow
 from userbot import CMD_HELP
 from userbot.events import javes05
 from userbot.modules.group import get_user_from_event
+from telethon import events
+import asyncio
+from datetime import datetime
+import requests
+import json
+from telethon import events
+import asyncio
+
 
 # ================= CONSTANT =================
 METOOSTR = [
@@ -1302,20 +1310,70 @@ def get_country_data(country, world):
 @javes05(outgoing=True, pattern="^!sayhi$")
 async def shalom(e):
     await e.edit(
-        "\n💰💰💰💰💰💰💰💰💰"
-        "\n💰🔷🔷🔷🔷🔷🔷🔷💰"
-        "\n💰💰💰💰🔷💰💰💰💰"
-        "\n💰💰💰💰🔷💰💰💰💰"
-        "\n💰💰💰💰🔷💰💰💰💰"
-        "\n💰🔷🔷🔷🔷️🔷🔷🔷💰"
-        "\n💰💰💰💰💰💰💰💰💰"
-        "\n💰💰💰💰💰💰💰💰💰"
-        "\n💰🔷💰💰️💰💰💰🔷💰"
-        "\n💰🔷🔷🔷🔷🔷🔷🔷💰"
-        "\n💰🔷🔷🔷🔷🔷🔷️🔷💰"
-        "\n💰🔷💰💰💰💰️💰🔷💰"
-        "\n💰💰💰💰💰💰💰💰💰")
+        "\n😷😷😷😷😷😷😷😷😷"
+        "\n😷🔷🔷🔷🔷🔷🔷🔷😷"
+        "\n😷😷😷😷🔷😷😷😷😷"
+        "\n😷😷😷😷🔷😷😷😷😷"
+        "\n😷😷😷😷🔷😷😷😷😷"
+        "\n😷🔷🔷🔷🔷️🔷🔷🔷😷"
+        "\n😷😷😷😷😷😷😷😷😷"
+        "\n😷😷😷😷😷😷😷😷😷"
+        "\n😷🔷😷😷️😷😷😷🔷😷"
+        "\n😷🔷🔷🔷🔷🔷🔷🔷😷"
+        "\n😷🔷🔷🔷🔷🔷🔷️🔷😷"
+        "\n😷🔷😷😷😷😷️😷🔷😷"
+        "\n😷😷😷😷😷😷😷😷😷")
         
+
+
+@javes05(outgoing=True, pattern="^!call(?: |$)(.*)")
+
+async def _(event):
+
+    if event.fwd_from:
+
+        return
+
+    animation_interval = 4
+
+    animation_ttl = range(0, 18)
+
+   # input_str = event.pattern_match.group(1)
+
+   # if input_str == "call":
+
+    await event.edit("Calling")
+
+    animation_chars = [
+        
+            "`Connecting To Telegram Headquarters...`",
+            "`Call Connected.`",
+            "`Telegram: Hello This is Telegram HQ. Who is this?`",
+            "`Me: Yo this is` @javes05 ,`Please Connect me to my lil bro,lel`",
+            "`User Authorised.`",
+            "`Calling lel Durov`  `At +94776996xxx`",
+            "`Private  Call Connected...`",
+            "`Me: Hello Sir, Please Ban This Telegram Account.`",    
+            "`lel: May I Know Who Is This?`",
+            "`Me: Yo Brah, I Am` @javes05 ",
+            "`lel: OMG!!! Long time no see, Wassup Brother...\nI'll Make Sure That Guy Account Will Get Blocked Within 24Hrs.`",
+            "`Me: Thanks, See You Later Brah.`",
+            "`lel: Please Don't Thank Brah, Telegram Is Our's. Just Gimme A Call When You Become Free.`",
+            "`Me: Is There Any Issue/Emergency???`",
+            "`lel: Yes Sur, There Is A Bug In Telegram v69.6.9.\nI Am Not Able To Fix It. If Possible, Please Help Fix The Bug.`",
+            "`Me: Send Me The App On My Telegram Account, I Will Fix The Bug & Send You.`",
+            "`lel: Sure Sur \nTC Bye Bye :)`",
+            "`Private Call Disconnected.`"
+        ]
+
+    for i in animation_ttl:
+
+        await asyncio.sleep(animation_interval)
+
+        await event.edit(animation_chars[i % 18])
+
+
+
 
 
 @javes05(outgoing=True, pattern="^!leave$")

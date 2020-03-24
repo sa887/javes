@@ -4,6 +4,15 @@ from re import sub
 from covid import Covid
 import time
 from collections import deque
+from random import randint
+from asyncio import sleep
+from os import execl
+import sys
+import os
+import io
+import sys
+import json
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 import requests
 from cowpy import cow
 from userbot import CMD_HELP
@@ -1290,7 +1299,23 @@ def get_country_data(country, world):
     return {"Status": "No information yet about this country!"}
     
     
-
+@javes05(outgoing=True, pattern="^!sayhi$")
+async def shalom(e):
+    await e.edit(
+        "\n💰💰💰💰💰💰💰💰💰"
+        "\n💰🔷🔷🔷🔷🔷🔷🔷💰"
+        "\n💰💰💰💰🔷💰💰💰💰"
+        "\n💰💰💰💰🔷💰💰💰💰"
+        "\n💰💰💰💰🔷💰💰💰💰"
+        "\n💰🔷🔷🔷🔷️🔷🔷🔷💰"
+        "\n💰💰💰💰💰💰💰💰💰"
+        "\n💰💰💰💰💰💰💰💰💰"
+        "\n💰🔷💰💰️💰💰💰🔷💰"
+        "\n💰🔷🔷🔷🔷🔷🔷🔷💰"
+        "\n💰🔷🔷🔷🔷🔷🔷️🔷💰"
+        "\n💰🔷💰💰💰💰️💰🔷💰"
+        "\n💰💰💰💰💰💰💰💰💰")
+        
 
 
 @javes05(outgoing=True, pattern="^!leave$")

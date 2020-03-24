@@ -9,7 +9,7 @@ import heroku3
 import asyncio
 from asyncio import create_subprocess_shell as asyncSubprocess
 from asyncio.subprocess import PIPE as asyncPIPE
-from userbot import CMD_HELP, LOGS, HEROKU_APP_NAME, HEROKU_API_KEY
+from userbot import CMD_HELP, LOGS, HEROKU_APPNAME, HEROKU_APIKEY
 import sys
 import json
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, UPSTREAM_REPO_URL
@@ -45,7 +45,7 @@ from os import remove
 from telethon import version
 from userbot import CMD_HELP, ALIVE_NAME
 from userbot.events import javes05
-Heroku = heroku3.from_key(HEROKU_API_KEY)
+Heroku = heroku3.from_key(HEROKU_APIKEY)
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
@@ -69,7 +69,7 @@ async def heroku_manager(heroku):
     await heroku.edit("`Processing...`")
     await asyncio.sleep(3)
     conf = heroku.pattern_match.group(1)
-    result = await subprocess_run(f'heroku ps -a {HEROKU_APP_NAME}', heroku)
+    result = await subprocess_run(f'heroku ps -a {HEROKU_APPNAME}', heroku)
     if result[2] != 0:
         return
     hours_remaining = result[0]

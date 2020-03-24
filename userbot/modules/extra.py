@@ -264,7 +264,7 @@ async def mim(event):
        await event.edit("```Reply to actual users message.```")
        return
     else:
-     await event.edit("```Transfiguration Time! Mwahaha Memifying this image! (」ﾟﾛﾟ)｣ ```")
+     await event.edit("``` Memifying this image!......  ```")
      await asyncio.sleep(5)
     
     async with bot.conversation("@MemeAutobot") as bot_conv:

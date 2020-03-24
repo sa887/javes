@@ -15,7 +15,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from pySmartDL import SmartDL
 from telethon.tl.types import DocumentAttributeVideo
-from userbot.modules.upload_download import progress, humanbytes, time_formatter
+from userbot.modules.system import progress, humanbytes, time_formatter
 from userbot import (TEMP_DOWNLOAD_DIRECTORY, CMD_HELP, bot)
 
 import datetime

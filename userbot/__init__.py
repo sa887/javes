@@ -59,8 +59,11 @@ BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", None))
 BOTLOG = sb(os.environ.get("BOTLOG", "False"))
 LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 
+# Genius lyrics  API Token
+GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
+
 # Bleep Blop, this is a bot ;)
-PM_AUTO_BAN = sb(os.environ.get("PM_PROTECTOR", "False"))
+PM_AUTO_BAN = sb(os.environ.get("PM_PROTECTOR", "True"))
 
 # Heroku Credentials for updater.
 HEROKU_APPNAME = os.environ.get("HEROKU_APPNAME", None)
@@ -69,7 +72,7 @@ HEROKU_APIKEY = os.environ.get("HEROKU_APIKEY", None)
 
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/rekcahkumar/javes")
+    "https://github.com/rekcah-pavi/javes")
     
 
 TELEGRAPH_SHORT_NAME = os.environ.get(

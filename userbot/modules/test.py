@@ -27,10 +27,10 @@ async def _(event):
        await event.edit("```Reply to actual users message.```")
        return
     await event.edit("```Processing```")
-    async with borg.conversation(chat) as conv:
+    async with bot.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=432858024))
-              await borg.forward_messages(chat, reply_message)
+              await bot.forward_messages(chat, reply_message)
               response = await response 
           except YouBlockedUserError: 
               await event.reply("```Please unblock @sangmatainfo_bot and try again```")
@@ -38,7 +38,7 @@ async def _(event):
           if response.text.startswith("Forward"):
               await event.edit("```error 2 forward privacy ```")
           else: 
-              await borg.send_file(event.chat_id, response.message.media)
+              await bot.send_file(event.chat_id, response.message.media)
 
 
 @javes05(outgoing=True, pattern="^!instant(?: |$)(.*)")

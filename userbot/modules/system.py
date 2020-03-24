@@ -64,7 +64,7 @@ async def subprocess_run(cmd, heroku):
     return stdout.decode().strip(), stderr.decode().strip(), exitCode
 
 
-@javes05(outgoing=True, pattern=r"^!heroku(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^!heroku(?: |$)(.*)")
 async def heroku_manager(heroku):
     await heroku.edit("`Processing...`")
     await asyncio.sleep(3)
